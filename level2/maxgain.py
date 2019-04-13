@@ -12,7 +12,7 @@ input_list = [1, 2, 5, 8, 16]
 ## My correct solution
 def max_gain(input_list):
 
-	gain = 0
+	diff = 0
 	minimum = input_list[0]
 
 	for val in input_list:
@@ -21,7 +21,7 @@ def max_gain(input_list):
 		if val - minimum > gain:
 			gain = val - minimum
 			
-	if gain <= 0:
+	if diff <= 0:
 		return 0
 	else:
 		return gain
